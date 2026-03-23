@@ -635,6 +635,28 @@
             line-height: 1.55;
         }
 
+        .place-icon {
+            display: inline-block;
+            margin-left: 0.25rem;
+            vertical-align: middle;
+            font-size: 0.85em;
+            line-height: 1;
+            position: relative;
+            top: -1px;
+        }
+
+        .section-legend {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-top: -2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
         .explore-pills {
             display: flex;
             flex-wrap: wrap;
@@ -1059,6 +1081,7 @@
     </style>
 </head>
 <body>
+
     <!-- HEADER -->
     <header>
         <nav>
@@ -1149,6 +1172,9 @@
         <div class="container">
             <h2>Explore Rome</h2>
             <p class="section-intro">Personal picks of places to go nearby.</p>
+            <p class="section-legend">
+                👟 walkable from the house &nbsp;·&nbsp; 🚗 short drive
+            </p>
 
             <!-- FOOD & DRINK -->
             <div class="explore-cat">
@@ -1157,28 +1183,28 @@
                     <a class="ec-card" href="https://www.yelp.com/biz/swift-and-finch-coffee-rome" target="_blank">
                         <img class="ec-card-img" src="img/swift_finch.webp" alt="Swift and Finch Coffee">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Swift &amp; Finch Coffee</div>
+                            <div class="ec-card-name">Swift &amp; Finch Coffee <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">The best coffee in Rome. Cozy, welcoming, and a great way to start the day.</div>
                         </div>
                     </a>
                     <a class="ec-card" href="https://www.yelp.com/biz/schroeders-new-deli-rome" target="_blank">
                         <img class="ec-card-img" src="img/schroeders.jpg" alt="Schroeder's New Deli">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Schroeder's New Deli</div>
+                            <div class="ec-card-name">Schroeder's New Deli <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">A Rome institution. Classic sandwiches and deli fare done right.</div>
                         </div>
                     </a>
                     <a class="ec-card" href="https://www.yelp.com/biz/aventine-rome-rome" target="_blank">
                         <img class="ec-card-img" src="img/aventine.jpg" alt="Aventine">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Aventine</div>
+                            <div class="ec-card-name">Aventine <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">Upscale Italian in a beautifully restored downtown space.</div>
                         </div>
                     </a>
                     <a class="ec-card" href="https://www.yelp.com/biz/harvest-moon-cafe-rome" target="_blank">
                         <img class="ec-card-img" src="img/harvest_moon.jpg" alt="Harvest Moon Cafe">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Harvest Moon Cafe</div>
+                            <div class="ec-card-name">Harvest Moon Cafe <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">Warm, relaxed, and consistently great. A slightly upscale local favorite.</div>
                         </div>
                     </a>
@@ -1186,15 +1212,15 @@
                     <a class="ec-card" href="https://www.yelp.com/biz/honeymoon-bakery-rome-3" target="_blank">
                         <img class="ec-card-img" src="img/honeymoon_bakery.webp" alt="Honeymoon Bakery">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Honeymoon Bakery</div>
+                            <div class="ec-card-name">Honeymoon Bakery <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">Fresh-baked pastries and gelato daily.</div>
                         </div>
                     </a>
                     <a class="ec-card" href="https://www.yelp.com/biz/the-sweet-bar-rome" target="_blank">
                         <img class="ec-card-img" src="img/sweet_bar.jpg" alt="The Sweet Bar">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">The Sweet Bar</div>
-                            <div class="ec-card-desc">Donuts and sweets, within walking distance.</div>
+                            <div class="ec-card-name">The Sweet Bar <span class="place-icon">👟</span></div>
+                            <div class="ec-card-desc">Donuts and sweets on Avenue A.</div>
                         </div>
                     </a>
                 </div>
@@ -1207,14 +1233,14 @@
                     <a class="ec-card" href="https://romegeorgia.org/robert-redden-footbridge/" target="_blank">
                         <img class="ec-card-img" src="img/foot_bridge.jpg" alt="Robert Redden Footbridge at night">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Robert Redden Footbridge</div>
+                            <div class="ec-card-name">Robert Redden Footbridge <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">A pedestrian bridge lit over the Oostanaula — worth visiting at any hour.</div>
                         </div>
                     </a>
                     <a class="ec-card" href="https://www.tripadvisor.com/Attraction_Review-g35232-d2707008-Reviews-or20-Myrtle_Hill_Cemetery-Rome_Georgia.html" target="_blank">
                         <img class="ec-card-img" src="img/myrtle_hill.jpg" alt="Myrtle Hill">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Myrtle Hill</div>
+                            <div class="ec-card-name">Myrtle Hill <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">A historic cemetery with sweeping views of Rome and the rivers below.</div>
                         </div>
                     </a>
@@ -1222,28 +1248,28 @@
                     <a class="ec-card" href="https://romegeorgia.org/city-clocktower/" target="_blank">
                         <img class="ec-card-img" src="img/clock_tower.jpg" alt="City Clocktower" style="object-position: center top;">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">City Clocktower</div>
+                            <div class="ec-card-name">City Clocktower <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">Rome's beloved hilltop landmark with some of the best views in town.</div>
                         </div>
                     </a>
                     <a class="ec-card" href="img/eco_trail.png" target="_blank">
                         <img class="ec-card-img" src="img/eco_trail.jpg" alt="ECO Heritage Trails">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">ECO Heritage Trails</div>
+                            <div class="ec-card-name">ECO Heritage Trails <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">Miles of riverside trail for walking, running, and biking right from the neighborhood.</div>
                         </div>
                     </a>
                     <a class="ec-card" href="https://romegeorgia.org/ridge-ferry-park/" target="_blank">
                         <img class="ec-card-img" src="img/ridge_ferry_park.jpg" alt="Ridge Ferry Park">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Ridge Ferry Park</div>
+                            <div class="ec-card-name">Ridge Ferry Park <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">Riverside park with trails and open green space along the Oostanaula.</div>
                         </div>
                     </a>
                     <a class="ec-card" href="https://www.berry.edu" target="_blank">
                         <img class="ec-card-img" src="img/berry_college.png" alt="Berry College">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Berry College</div>
+                            <div class="ec-card-name">Berry College <span class="place-icon">🚗</span></div>
                             <div class="ec-card-desc">Miles of trails through one of the most spectacular and historically scenic college campuses in the country.</div>
                         </div>
                     </a>
@@ -1257,14 +1283,14 @@
                     <a class="ec-card" href="https://rometenniscenter.com/" target="_blank">
                         <img class="ec-card-img" src="img/tennis_center.jpg" alt="Berry Tennis Center">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Berry Tennis Center</div>
+                            <div class="ec-card-name">Berry Tennis Center <span class="place-icon">🚗</span></div>
                             <div class="ec-card-desc">World-class courts on the Berry College campus, about a 10-minute drive.</div>
                         </div>
                     </a>
                     <a class="ec-card" href="https://www.romega.us/427/Tennis-Pickleball" target="_blank">
                         <img class="ec-card-img" src="img/downtown_tennis.jpg" alt="Downtown Tennis & Pickleball">
                         <div class="ec-card-body">
-                            <div class="ec-card-name">Downtown Tennis &amp; Pickleball</div>
+                            <div class="ec-card-name">Downtown Tennis &amp; Pickleball <span class="place-icon">👟</span></div>
                             <div class="ec-card-desc">Public courts in the heart of Rome. Easy to walk to, great for a quick match.</div>
                         </div>
                     </a>
