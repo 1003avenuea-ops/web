@@ -771,6 +771,50 @@
         }
 
 
+        /* REVIEWS SECTION */
+        #reviews {
+            background: var(--light-bg);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.75rem 1.5rem;
+            border: 1px solid rgba(0,0,0,0.07);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .review-stars {
+            color: var(--accent);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        .review-text {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--text-dark);
+            font-style: italic;
+            flex: 1;
+        }
+
+        .review-author {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
         /* BOOKING SECTION */
         #booking {
             background: white;
@@ -1334,6 +1378,30 @@
                     <p>The ECO Greenway connects you to Ridge Ferry Park, the River District, and miles of scenic trail along the Oostanaula and Etowah rivers.</p>
                 </div>
             </a>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews">
+        <div class="container">
+            <h2>What Guests Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"This is one of the cutest houses we've ever stayed! The vibe is historic but the renovations make it modern without losing its touch. Great location for what we needed. Benjamin was very responsive and helpful. Must stay for Rome!"</p>
+                    <div class="review-author">Andrea &nbsp;·&nbsp; San Antonio, TX</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"A beautiful historic house, remodeled to respect the original woodwork and cabinetry, with an impressive porch — we spent our evenings and morning coffee there! Very spacious, neat and clean. Benjamin was a very nice, flexible and accommodating host. Highly recommend!"</p>
+                    <div class="review-author">Florencia &nbsp;·&nbsp; Starkville, MS</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The home was beautiful and the neighborhood was peaceful with the local kitties roaming around. Arriving was easy and home was spotless. Loved our stay — would love to stay here again!"</p>
+                    <div class="review-author">Sandy &nbsp;·&nbsp; Jackson, TN</div>
+                </div>
+            </div>
         </div>
     </section>
 
