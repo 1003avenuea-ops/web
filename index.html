@@ -934,6 +934,46 @@
             }
         }
 
+        /* MOBILE IMPROVEMENTS */
+        @media (max-width: 600px) {
+            /* Nav: shorten logo */
+            .logo-full { display: none; }
+            .logo-short { display: inline; }
+
+            /* Hero: tighter */
+            .hero { height: 280px; }
+            .hero h1 { font-size: 1.5rem; }
+            .hero .tagline { font-size: 0.8rem; letter-spacing: 0; }
+
+            /* CTA buttons: full width, easy tap targets */
+            .cta-buttons { flex-direction: column; align-items: center; gap: 0.75rem; }
+            .btn { width: 80%; text-align: center; padding: 0.9rem 1rem; font-size: 1rem; }
+
+            /* Gallery: 2 columns */
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+
+            /* Booking facts: smaller, wraps gracefully */
+            .booking-facts { font-size: 0.78rem; line-height: 1.8; }
+
+            /* Booking cards: less padding */
+            .booking-option { padding: 1.5rem 1.2rem; }
+
+            /* Explore: 2 cols until very small */
+            .ec-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+            .ec-card-img { height: 110px; }
+            .ec-card-name { font-size: 0.82rem; }
+            .ec-card-desc { font-size: 0.72rem; }
+
+            /* Section headings */
+            section h2 { font-size: 1.5rem; }
+            .section-intro { font-size: 0.88rem; }
+        }
+
+        @media (max-width: 380px) {
+            .ec-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
         /* LIGHTBOX */
         .lightbox {
             display: none;
@@ -1002,7 +1042,7 @@
     <!-- HEADER -->
     <header>
         <nav>
-            <div class="logo">1003 Avenue A, Rome, Georgia</div>
+            <div class="logo"><span class="logo-full">1003 Avenue A, Rome, Georgia</span><span class="logo-short" style="display:none;">1003 Avenue A</span></div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#explore">Explore Rome</a></li>
