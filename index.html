@@ -313,24 +313,26 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 0.75rem 2rem;
+            gap: 0.5rem 0;
             margin-bottom: 2rem;
-        }
-
-        .amenity-item {
-            display: flex;
-            align-items: center;
-            gap: 0.45rem;
             font-size: 0.95rem;
-            color: var(--text-dark);
-            font-weight: 500;
+            color: var(--text-light);
         }
 
-        .amenity-item .amenity-icon {
-            font-size: 1.15rem;
-            display: inline-block;
-            position: relative;
-            top: -1px;
+        .amenity-strip span {
+            padding: 0 1rem;
+            border-right: 1px solid var(--border);
+            line-height: 1;
+        }
+
+        .amenity-strip span:last-child {
+            border-right: none;
+        }
+
+        .amenity-check {
+            color: var(--accent);
+            font-weight: 700;
+            margin-right: 0.3rem;
         }
 
         .gallery-grid {
@@ -1211,9 +1213,11 @@
     <section id="gallery">
         <div class="container">
             <div class="amenity-strip">
-                <div class="amenity-item"><span class="amenity-icon">📶</span> Fast WiFi</div>
-                <div class="amenity-item"><span class="amenity-icon">🅿️</span> Free Parking</div>
-                <div class="amenity-item"><span class="amenity-icon">🧺</span> Washer &amp; Dryer</div>
+                <span><span class="amenity-check">✓</span>Fast WiFi</span>
+                <span><span class="amenity-check">✓</span>Free Parking</span>
+                <span><span class="amenity-check">✓</span>Washer &amp; Dryer</span>
+                <span><span class="amenity-check">✓</span>Keyless Entry</span>
+                <span><span class="amenity-check">✓</span>Nest Thermostat</span>
             </div>
 
             <div class="gallery-grid">
