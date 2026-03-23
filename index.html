@@ -309,6 +309,30 @@
             background-color: var(--cream);
         }
 
+        .amenity-strip {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .amenity-item .amenity-icon {
+            font-size: 1.15rem;
+            display: inline-block;
+            position: relative;
+            top: -1px;
+        }
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1186,6 +1210,12 @@
     <!-- GALLERY -->
     <section id="gallery">
         <div class="container">
+            <div class="amenity-strip">
+                <div class="amenity-item"><span class="amenity-icon">📶</span> Fast WiFi</div>
+                <div class="amenity-item"><span class="amenity-icon">🅿️</span> Free Parking</div>
+                <div class="amenity-item"><span class="amenity-icon">🧺</span> Washer &amp; Dryer</div>
+            </div>
+
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="img/acdf2566-5643-41fb-a94c-72960bd0cbfe.jpg" alt="1003 Avenue A">
