@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1003 Avenue A | Historic Bungalow in Rome, GA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2c3e2c;
+            --secondary: #8b7355;
+            --accent: #c84b31;
+            --light-bg: #faf6f3;
+            --cream: #f5ede3;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --border: #e8ddd5;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: var(--cream);
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.97rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+            .logo {
+                font-size: 0.88rem;
+            }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(10, 8, 5, 0.1) 0%, rgba(10, 8, 5, 0.55) 55%, rgba(10, 8, 5, 0.82) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 1.5rem 2.5rem;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+        }
+
+        .hero .address {
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+            opacity: 0.88;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .hero .tagline {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #a63a22;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(200, 75, 49, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary);
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 320px;
+            }
+            .hero-content {
+                padding: 0 1.2rem 2rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero .address {
+                font-size: 0.95rem;
+            }
+            .hero .tagline {
+                font-size: 0.88rem;
+            }
+        }
+
+        /* CONTAINER & SECTIONS */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 0.5rem auto 0;
+        }
+
+        .section-intro {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* QUICK FACTS */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .fact-card .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .fact-card .label {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* GALLERY */
+        #gallery {
+            background-color: var(--cream);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 1;
+            background-color: #ddd;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ABOUT SECTION */
+        #about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .about-features li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .about-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .about-text h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* ROME DIVIDER */
+        .rome-divider {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .rome-divider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+        }
+
+        .rome-divider-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(20,15,10,0.2), rgba(20,15,10,0.55));
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 2.5rem;
+        }
+
+        .rome-divider-text {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .rome-divider {
+                height: 220px;
+            }
+            .rome-divider-text {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        /* HIGHLIGHTS/LOCATION */
+        #highlights {
+            background-color: white;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            border-top-color: var(--accent);
+        }
+
+        .highlight-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* AMENITIES */
+        #amenities {
+            background: var(--cream);
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .amenity-card {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-bg) 100%);
+            border: 2px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .amenity-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .amenity-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .amenity-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(200, 75, 49, 0.12);
+        }
+
+        .amenity-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .amenity-card a:hover {
+            background: #a63a22;
+        }
+
+        .amenity-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* EXPLORE ROME */
+        #explore { background: white; }
+
+        .explore-cat {
+            margin-bottom: 2.8rem;
+        }
+
+        .explore-cat:last-child {
+            margin-bottom: 0;
+        }
+
+        .explore-cat-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--secondary);
+            margin-bottom: 1.2rem;
+        }
+
+        .explore-cat-label::before,
+        .explore-cat-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .ec-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .ec-card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            background: var(--light-bg);
+            transition: box-shadow 0.25s, transform 0.25s;
+            min-height: 120px;
+        }
+
+        .ec-card:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .ec-card-img {
+            width: 100%;
+            height: 155px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ec-card.no-photo {
+            border-top: 3px solid var(--accent);
+        }
+
+        .ec-card-body {
+            padding: 0.85rem 1rem 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ec-card-name {
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .ec-card-desc {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.55;
+        }
+
+        .explore-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .explore-pill {
+            display: inline-block;
+            padding: 0.45rem 1rem;
+            background: var(--light-bg);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .explore-pill:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .ec-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .ec-grid { grid-template-columns: 1fr; }
+        }
+
+        /* MAPS SECTION */
+        #maps {
+            background: var(--cream);
+        }
+
+        .maps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .map-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .map-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .map-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .map-item-text {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .map-item-text h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .map-item-text p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .map-item-download {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .map-item-full {
+            display: block;
+            max-width: 800px;
+            margin: 2rem auto 0;
+        }
+
+        .map-item-download:hover {
+            transform: translateY(-5px);
+        }
+
+        .map-download-hint {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--accent);
+            margin-left: 0.4rem;
+            opacity: 0.8;
+        }
+
+        .map-img-wrapper {
+            position: relative;
+        }
+
+        .map-img-wrapper img {
+            width: 100%;
+            display: block;
+        }
+
+
+        /* BOOKING SECTION */
+        #booking {
+            background: white;
+            text-align: center;
+        }
+
+        .booking-facts {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            letter-spacing: 0.2px;
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .booking-option {
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--cream) 100%);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .booking-option:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .booking-option h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .booking-option p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .booking-option .btn {
+            width: 100%;
+        }
+
+        .booking-option.featured {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+            box-shadow: 0 8px 32px rgba(200, 75, 49, 0.28);
+        }
+
+        .booking-option.featured h3 {
+            color: white;
+        }
+
+        .booking-option.featured p {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .booking-option.featured:hover {
+            border-color: var(--accent);
+            background: #b8402a;
+            box-shadow: 0 12px 36px rgba(200, 75, 49, 0.38);
+        }
+
+        .booking-badge {
+            position: absolute;
+            top: 1.4rem;
+            right: 1.4rem;
+            background: white;
+            color: var(--accent);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+        }
+
+        .btn-direct {
+            display: inline-block;
+            width: 100%;
+            padding: 0.85rem 1.5rem;
+            background: white;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s;
+            box-sizing: border-box;
+        }
+
+        .btn-direct:hover {
+            background: rgba(255,255,255,0.9);
+            color: #b8402a;
+        }
+
+        .direct-contact {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .direct-contact p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        .direct-contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .direct-contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        .property-info-bar {
+            background: #3d4a3d;
+            color: white;
+            padding: 1.5rem 1.5rem;
+        }
+
+        .property-info-bar .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem 14rem;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: var(--accent);
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        footer {
+            background: var(--cream);
+            border-top: 1px solid var(--border);
+            padding: 1.2rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            section h2 {
+                font-size: 1.8rem;
+            }
+            .property-info-bar .footer-content {
+                justify-content: flex-start;
+            }
+            section {
+                padding: 2.5rem 0;
+            }
+        }
+
+        /* UTILITIES */
+        .hidden-sm {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hidden-sm {
+                display: none;
+            }
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 92vw;
+            max-height: 92vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+            cursor: default;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            color: white;
+            font-size: 2.2rem;
+            line-height: 1;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            user-select: none;
+        }
+
+        .lightbox-close:hover {
+            opacity: 1;
+        }
+
+        .gallery-item {
+            cursor: zoom-in;
+        }
+
+        /* SMOOTH SCROLL */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* BADGE */
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">1003 Avenue A, Rome, Georgia</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#explore">Explore Rome</a></li>
+                <li><a href="#booking">Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <img src="img/e0d68a86-e002-4e63-9c02-d3e37c15e7e4.jpg" alt="1003 Avenue A at dusk" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>1003 Avenue A</h1>
+            <p class="address">Rome, Georgia</p>
+            <p class="tagline">Historic Bungalow • Downtown Living • Trail Access</p>
+            <div class="cta-buttons">
+                <a href="#booking" class="btn btn-primary">Book Now</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <h2>About This Home</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Historic Charm Meets Modern Comfort</h3>
+                    <p>A lovingly restored craftsman bungalow in the heart of Rome — original character intact, everything updated where it counts.</p>
+
+                    <ul class="about-features">
+                        <li>2 bedrooms, 1 full bathroom</li>
+                        <li>Updated kitchen & bathroom</li>
+                        <li>Original hardwood floors & period details</li>
+                        <li>Close to downtown & the Heritage Trail System</li>
+                    </ul>
+                </div>
+
+                <div class="about-image">
+                    <img src="img/3c1df396-6b5b-4579-a449-a391105568ff.jpg" alt="Updated kitchen with modern finishes" style="cursor:zoom-in;" onclick="document.getElementById('lightbox-img').src=this.src; document.getElementById('lightbox').classList.add('active');">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <p class="section-intro">Step inside this beautifully restored historic bungalow.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/acdf2566-5643-41fb-a94c-72960bd0cbfe.jpg" alt="1003 Avenue A">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/b1b76ba9-ef2a-4f5b-93db-29868a72aca7.jpg" alt="Fireplace and original dark beam ceiling">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/bad5a611-12fa-4900-ad2c-88197fc80244.jpg" alt="Formal living room with period columns">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/6bbf8263-4231-47fc-a3a7-e2401bae8ac7.jpg" alt="Casual living room">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/ce910998-2a76-46d5-a4b0-bdc773a68c62.jpg" alt="Dining room with chandelier">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/6c81715a-d1cc-4860-84d1-22b1e17ef464.jpg" alt="Fully updated kitchen">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/eb27c901-5cb9-4350-af6f-135d9a09bb0c.jpg" alt="Bedroom one with four-poster bed">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/eec83d48-ab86-48d8-b26b-eb24c66cf591.jpg" alt="Bedroom two">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/f68264d4-22f6-4029-996b-f863a029c390.jpg" alt="Bathroom with patterned tile">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPLORE ROME -->
+    <section id="explore">
+        <div class="container">
+            <h2>Explore Rome</h2>
+            <p class="section-intro">Personal picks of places to go nearby.</p>
+
+            <!-- FOOD & DRINK -->
+            <div class="explore-cat">
+                <div class="explore-cat-label">Food &amp; Drink</div>
+                <div class="ec-grid">
+                    <a class="ec-card" href="https://www.yelp.com/biz/swift-and-finch-coffee-rome" target="_blank">
+                        <img class="ec-card-img" src="img/swift_finch.webp" alt="Swift and Finch Coffee">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Swift &amp; Finch Coffee</div>
+                            <div class="ec-card-desc">The best coffee in Rome. Cozy, welcoming, and a great way to start the day.</div>
+                        </div>
+                    </a>
+                    <a class="ec-card" href="https://www.yelp.com/biz/schroeders-new-deli-rome" target="_blank">
+                        <img class="ec-card-img" src="img/schroeders.jpg" alt="Schroeder's New Deli">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Schroeder's New Deli</div>
+                            <div class="ec-card-desc">A Rome institution. Classic sandwiches and deli fare done right.</div>
+                        </div>
+                    </a>
+                    <a class="ec-card" href="https://www.yelp.com/biz/aventine-rome-rome" target="_blank">
+                        <img class="ec-card-img" src="img/aventine.jpg" alt="Aventine">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Aventine</div>
+                            <div class="ec-card-desc">Upscale Italian in a beautifully restored downtown space.</div>
+                        </div>
+                    </a>
+                    <a class="ec-card" href="https://www.yelp.com/biz/harvest-moon-cafe-rome" target="_blank">
+                        <img class="ec-card-img" src="img/harvest_moon.jpg" alt="Harvest Moon Cafe">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Harvest Moon Cafe</div>
+                            <div class="ec-card-desc">Warm, relaxed, and consistently great. A slightly upscale local favorite.</div>
+                        </div>
+                    </a>
+
+                    <a class="ec-card" href="https://www.yelp.com/biz/honeymoon-bakery-rome-3" target="_blank">
+                        <img class="ec-card-img" src="img/honeymoon_bakery.webp" alt="Honeymoon Bakery">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Honeymoon Bakery</div>
+                            <div class="ec-card-desc">Fresh-baked pastries and gelato daily.</div>
+                        </div>
+                    </a>
+                    <a class="ec-card" href="https://www.yelp.com/biz/the-sweet-bar-rome" target="_blank">
+                        <img class="ec-card-img" src="img/sweet_bar.jpg" alt="The Sweet Bar">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">The Sweet Bar</div>
+                            <div class="ec-card-desc">Donuts and sweets, within walking distance.</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SIGHTS & OUTDOORS -->
+            <div class="explore-cat">
+                <div class="explore-cat-label">Sights &amp; Outdoors</div>
+                <div class="ec-grid">
+                    <a class="ec-card" href="https://romegeorgia.org/robert-redden-footbridge/" target="_blank">
+                        <img class="ec-card-img" src="img/foot_bridge.jpg" alt="Robert Redden Footbridge at night">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Robert Redden Footbridge</div>
+                            <div class="ec-card-desc">A pedestrian bridge lit over the Oostanaula — worth visiting at any hour.</div>
+                        </div>
+                    </a>
+                    <a class="ec-card" href="https://www.tripadvisor.com/Attraction_Review-g35232-d2707008-Reviews-or20-Myrtle_Hill_Cemetery-Rome_Georgia.html" target="_blank">
+                        <img class="ec-card-img" src="img/myrtle_hill.jpg" alt="Myrtle Hill">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Myrtle Hill</div>
+                            <div class="ec-card-desc">A historic cemetery with sweeping views of Rome and the rivers below.</div>
+                        </div>
+                    </a>
+
+                    <a class="ec-card" href="https://romegeorgia.org/city-clocktower/" target="_blank">
+                        <img class="ec-card-img" src="img/clock_tower.jpg" alt="City Clocktower" style="object-position: center top;">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">City Clocktower</div>
+                            <div class="ec-card-desc">Rome's beloved hilltop landmark with some of the best views in town.</div>
+                        </div>
+                    </a>
+                    <a class="ec-card" href="img/eco_trail.png" target="_blank">
+                        <img class="ec-card-img" src="img/eco_trail.jpg" alt="ECO Heritage Trails">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">ECO Heritage Trails</div>
+                            <div class="ec-card-desc">Miles of riverside trail for walking, running, and biking right from the neighborhood.</div>
+                        </div>
+                    </a>
+                    <a class="ec-card" href="https://romegeorgia.org/ridge-ferry-park/" target="_blank">
+                        <img class="ec-card-img" src="img/ridge_ferry_park.jpg" alt="Ridge Ferry Park">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Ridge Ferry Park</div>
+                            <div class="ec-card-desc">Riverside park with trails and open green space along the Oostanaula.</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RECREATION -->
+            <div class="explore-cat">
+                <div class="explore-cat-label">Recreation</div>
+                <div class="ec-grid">
+                    <a class="ec-card" href="https://rometenniscenter.com/" target="_blank">
+                        <img class="ec-card-img" src="img/tennis_center.jpg" alt="Berry Tennis Center">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Berry Tennis Center</div>
+                            <div class="ec-card-desc">World-class courts on the Berry College campus, about a 10-minute drive.</div>
+                        </div>
+                    </a>
+                    <a class="ec-card" href="https://www.romega.us/427/Tennis-Pickleball" target="_blank">
+                        <img class="ec-card-img" src="img/downtown_tennis.jpg" alt="Downtown Tennis & Pickleball">
+                        <div class="ec-card-body">
+                            <div class="ec-card-name">Downtown Tennis &amp; Pickleball</div>
+                            <div class="ec-card-desc">Public courts in the heart of Rome. Easy to walk to, great for a quick match.</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ESSENTIALS -->
+            <div class="explore-cat">
+                <div class="explore-cat-label">Essentials</div>
+                <div class="explore-pills">
+                    <a class="explore-pill" href="https://www.yelp.com/biz/publix-rome" target="_blank">Publix</a>
+                    <a class="explore-pill" href="https://www.aldi.us/stores/l/ga/rome/836-turner-mccall-blvd-sw/l916" target="_blank">Aldi</a>
+                    <a class="explore-pill" href="https://www.atriumhealthfloydharbin.org/locations/hospital/floyd-medical-center" target="_blank">Floyd Medical Center</a>
+                    <a class="explore-pill" href="https://tools.usps.com/locations/details/1379807" target="_blank">Post Office</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MAPS SECTION -->
+    <section id="maps">
+        <div class="container">
+            <h2>Heritage Trail System</h2>
+            <p class="section-intro">Miles of trails for walking, running, and biking right from the neighborhood.</p>
+
+            <a class="map-item map-item-download map-item-full" href="img/eco_trail.png" target="_blank" title="View Heritage Trail Map">
+                <div class="map-img-wrapper">
+                    <img src="img/eco_trail.png" alt="ECO Greenway Heritage Trails Map">
+                </div>
+                <div class="map-item-text">
+                    <h3>ECO Greenway Trail Map</h3>
+                    <p>The ECO Greenway connects you to Ridge Ferry Park, the River District, and miles of scenic trail along the Oostanaula and Etowah rivers.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking">
+        <div class="container">
+            <h2>Book Your Stay</h2>
+            <p class="booking-facts">2 Bedrooms &nbsp;·&nbsp; 1 Bathroom &nbsp;·&nbsp; Recently Renovated &nbsp;·&nbsp; Historic Charm &nbsp;·&nbsp; Rome, GA 30165</p>
+
+            <div class="booking-grid">
+                <div class="booking-option">
+                    <h3>Airbnb</h3>
+                    <p>Book instantly on Airbnb with flexible cancellation and guest protection.</p>
+                    <a href="https://airbnb.com/h/1003avenuea" class="btn btn-primary" target="_blank">Book on Airbnb</a>
+                </div>
+                
+                <div class="booking-option">
+                    <h3>VRBO</h3>
+                    <p>Reserve through VRBO for direct owner connection and great rates.</p>
+                    <a href="https://www.vrbo.com/4953912" class="btn btn-primary" target="_blank">Book on VRBO</a>
+                </div>
+                
+                <div class="booking-option featured">
+                    <h3>Book Direct</h3>
+                    <p>Skip the platform fees and connect with us directly. Same home, better price.</p>
+                    <a href="mailto:1003avenuea@gmail.com" class="btn-direct">1003AvenueA@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ROME DIVIDER -->
+    <div class="rome-divider">
+        <img src="img/rome_ga_image.jpg" alt="Downtown Rome, Georgia">
+        <div class="rome-divider-overlay"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 1003 Avenue A. A historic bungalow in beautiful Rome, Georgia.</p>
+        </div>
+    </footer>
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightboxImg.src = '';
+        }
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>Generate Favicon</title></head>
+<body style="background:#555; display:flex; flex-direction:column; align-items:center; padding:2rem; font-family:sans-serif;">
+    <p style="color:white; margin-bottom:0.5rem;">Preview (gray = transparent):</p>
+    <canvas id="c" style="image-rendering:pixelated; width:256px; height:256px; border:1px solid #aaa;"></canvas>
+    <br>
+    <button onclick="download()" style="margin-top:1rem; padding:0.8rem 2rem; font-size:1rem; cursor:pointer;">
+        Download favicon.png
+    </button>
+
+    <script>
+        const canvas = document.getElementById('c');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 32;
+        canvas.height = 32;
+
+        ctx.clearRect(0, 0, 32, 32);
+
+        // Body
+        ctx.fillStyle = '#D4B896';
+        ctx.fillRect(4, 16, 24, 14);
+
+        // Roof
+        ctx.fillStyle = '#992222';
+        ctx.beginPath();
+        ctx.moveTo(16, 4);
+        ctx.lineTo(2, 17);
+        ctx.lineTo(30, 17);
+        ctx.closePath();
+        ctx.fill();
+
+        // Door
+        ctx.fillStyle = '#E05520';
+        ctx.fillRect(13, 22, 6, 8);
+
+        function download() {
+            const a = document.createElement('a');
+            a.download = 'favicon.png';
+            a.href = canvas.toDataURL('image/png');
+            a.click();
+        }
+    </script>
+</body>
+</html>
