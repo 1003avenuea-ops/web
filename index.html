@@ -74,6 +74,19 @@
             transition: color 0.2s ease;
         }
 
+        .nav-book-btn {
+            background: var(--accent);
+            color: white !important;
+            padding: 0.4rem 1.1rem;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .nav-book-btn:hover {
+            background: #b8402a;
+            color: white !important;
+        }
+
         nav a:hover {
             color: var(--accent);
         }
@@ -127,7 +140,7 @@
 
         .hero h1 {
             font-size: 2.6rem;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.4rem;
             font-weight: 700;
             letter-spacing: -0.5px;
             text-shadow: 0 2px 12px rgba(0,0,0,0.5);
@@ -135,7 +148,6 @@
 
         .hero .address {
             font-size: 1.1rem;
-            margin-top: 1rem;
             margin-bottom: 0.3rem;
             opacity: 0.88;
             font-weight: 700;
@@ -1047,9 +1059,8 @@
         <nav>
             <div class="logo"><span class="logo-full">1003 Avenue A, Rome, Georgia</span><span class="logo-short" style="display:none;">1003 Avenue A</span></div>
             <ul>
-                <li><a href="#about">About</a></li>
                 <li><a href="#explore">Explore Rome</a></li>
-                <li><a href="#booking">Book</a></li>
+                <li><a href="#booking" class="nav-book-btn">Book</a></li>
             </ul>
         </nav>
     </header>
@@ -1060,10 +1071,6 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>1003 Avenue A</h1>
-            <div class="cta-buttons">
-                <a href="#booking" class="btn btn-primary">Book Now</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
-            </div>
             <p class="address">Rome, Georgia</p>
             <p class="tagline">Historic Bungalow • Downtown Living • Trail Access</p>
         </div>
