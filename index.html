@@ -32,7 +32,7 @@
 
         /* HEADER & NAVIGATION */
         header {
-            background: var(--cream);
+            background: #ede0d2;
             border-bottom: 1px solid var(--border);
             padding: 0.75rem 0;
             position: sticky;
@@ -913,7 +913,7 @@
         }
 
         footer {
-            background: var(--cream);
+            background: #ede0d2;
             border-top: 1px solid var(--border);
             padding: 1.2rem 1.5rem;
             text-align: center;
@@ -949,6 +949,8 @@
 
         /* MOBILE IMPROVEMENTS */
         @media (max-width: 600px) {
+            header { box-shadow: 0 2px 10px rgba(0,0,0,0.10); }
+
             /* Nav: center and stack */
             .logo-full { display: none; }
             .logo-short { display: inline; }
