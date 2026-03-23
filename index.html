@@ -936,9 +936,11 @@
 
         /* MOBILE IMPROVEMENTS */
         @media (max-width: 600px) {
-            /* Nav: shorten logo */
+            /* Nav: center and stack */
             .logo-full { display: none; }
             .logo-short { display: inline; }
+            nav { flex-direction: column; gap: 0.5rem; align-items: center; }
+            nav ul { justify-content: center; }
 
             /* Hero: tighter */
             .hero { height: 280px; }
