@@ -981,19 +981,24 @@
             border-radius: 999px;
         }
 
+        .direct-cta-wrapper {
+            position: relative;
+        }
+
         .btn-direct {
             display: inline-block;
             width: 100%;
             padding: 1rem 2rem;
             background: white;
             color: var(--accent);
-            font-weight: 700;
+            font-family: inherit;
+            font-weight: 600;
             font-size: 1rem;
             border: none;
-            border-radius: 6px;
+            border-radius: 4px;
             text-decoration: none;
             text-align: center;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             box-sizing: border-box;
             cursor: pointer;
         }
@@ -1570,10 +1575,12 @@
                         <h3>Book Directly</h3>
                     </div>
                     <p>Skip the platform fees and connect with us directly. Same home, better price.</p>
-                    <button class="btn-direct" id="book-direct-btn" onclick="showDirectContact()">Book Directly</button>
-                    <div class="direct-contact" id="direct-contact">
-                        <a href="mailto:1003avenuea@gmail.com" class="contact-item">1003AvenueA@gmail.com</a>
-                        <a href="tel:+11234567890" class="contact-item">(123) 456-7890</a>
+                    <div class="direct-cta-wrapper">
+                        <button class="btn-direct" id="book-direct-btn" onclick="showDirectContact()">Book Directly</button>
+                        <div class="direct-contact" id="direct-contact">
+                            <a href="mailto:1003avenuea@gmail.com" class="contact-item">1003AvenueA@gmail.com</a>
+                            <a href="tel:+11234567890" class="contact-item">(123) 456-7890</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1627,12 +1634,14 @@
 
         function showDirectContact() {
             const btn = document.getElementById('book-direct-btn');
+            const contact = document.getElementById('direct-contact');
+            btn.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
             btn.style.opacity = '0';
             btn.style.transform = 'translateY(-4px)';
-            btn.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
             setTimeout(() => {
-                btn.style.display = 'none';
-                document.getElementById('direct-contact').classList.add('visible');
+                btn.style.visibility = 'hidden';
+                btn.style.position = 'absolute';
+                contact.classList.add('visible');
             }, 200);
         }
     </script>
