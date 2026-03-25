@@ -909,6 +909,13 @@
             border: 2px solid var(--border);
             transition: all 0.3s ease;
             position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .booking-option .btn,
+        .direct-cta-wrapper {
+            margin-top: auto;
         }
 
         .booking-option:hover {
@@ -1009,16 +1016,17 @@
         }
 
         .direct-contact {
-            margin-top: 1rem;
+            margin-top: 0;
             overflow: hidden;
             max-height: 0;
             opacity: 0;
-            transition: max-height 0.4s ease, opacity 0.35s ease;
+            transition: max-height 0.4s ease, opacity 0.35s ease, margin-top 0.4s ease;
         }
 
         .direct-contact.visible {
             max-height: 200px;
             opacity: 1;
+            margin-top: 1rem;
         }
 
         .contact-item {
